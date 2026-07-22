@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>GRASKAMA · Open Recruitment Pramuka SKAMA</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-pramuka.png" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="icon" type="image/png" href="logo-pramuka.png" />
     <style>
         /* ===== RESET & BASE ===== */
         *,
@@ -548,7 +550,7 @@
             opacity: 0.5;
         }
 
-        /* ===== ABOUT SECTION ===== */
+        /* ===== ABOUT ===== */
         .about {
             background: linear-gradient(180deg, var(--vintage-beige) 0%, #e8dcc6 100%);
             padding: 100px 0;
@@ -622,7 +624,6 @@
             margin-bottom: 4px;
             text-align: center;
         }
-
         .about-card .about-sub {
             font-family: 'Cinzel', serif;
             color: var(--old-gold);
@@ -908,7 +909,7 @@
             }
         }
 
-        /* ===== REGISTRATION FORM ===== */
+        /* ===== REGISTRATION ===== */
         .registration {
             background: var(--dark-brown);
             padding: 100px 0;
@@ -1123,7 +1124,7 @@
             }
         }
 
-        /* ===== SUCCESS MESSAGE ===== */
+        /* ===== SUCCESS MESSAGE — TANPA NOMOR REGISTRASI ===== */
         .success-message {
             text-align: center;
             padding: 20px 10px;
@@ -1144,32 +1145,29 @@
             color: rgba(242, 230, 200, 0.7);
             font-size: 15px;
         }
-        .success-id {
-            background: rgba(199, 166, 107, 0.1);
-            border: 1px solid var(--old-gold);
-            border-radius: 16px;
-            padding: 16px 20px;
-            margin: 20px auto;
-            max-width: 300px;
-        }
-        .success-id span {
-            display: block;
-            font-size: 12px;
-            color: rgba(242, 230, 200, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .success-id strong {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 28px;
-            color: var(--old-gold);
-            letter-spacing: 2px;
-        }
-        .success-note {
-            font-size: 14px !important;
-            color: rgba(242, 230, 200, 0.5) !important;
+        .success-message .note {
+            font-size: 14px;
+            color: rgba(242, 230, 200, 0.5);
             max-width: 400px;
-            margin: 0 auto;
+            margin: 10px auto 0;
+        }
+        .btn-back {
+            margin-top: 20px;
+            padding: 12px 32px;
+            background: var(--old-gold);
+            color: var(--dark-brown);
+            border: none;
+            border-radius: 60px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-back:hover {
+            background: #d4b87a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(199, 166, 107, 0.3);
         }
 
         /* ===== COUNTDOWN ===== */
@@ -1278,132 +1276,7 @@
             opacity: 0.80;
         }
 
-        /* ===== DATA PENDAFTAR — TABEL ADMIN ===== */
-        .data-section {
-            background: var(--vintage-beige);
-            padding: 80px 0;
-        }
-
-        .data-card {
-            background: var(--vintage-beige);
-            border-radius: 24px;
-            padding: clamp(24px, 3vw, 40px);
-            box-shadow: var(--paper-shadow);
-            border: 1px solid rgba(199, 166, 107, 0.15);
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .data-card .data-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-        .data-card .data-header h3 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(18px, 2vw, 24px);
-            color: var(--dark-maroon);
-        }
-        .data-card .data-header .btn-small {
-            padding: 8px 20px;
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 40px;
-            border: none;
-            background: var(--old-gold);
-            color: var(--dark-brown);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .data-card .data-header .btn-small:hover {
-            background: #d4b87a;
-            transform: translateY(-2px);
-        }
-
-        .table-wrapper {
-            overflow-x: auto;
-            border-radius: 12px;
-            border: 1px solid rgba(199, 166, 107, 0.10);
-        }
-
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: clamp(12px, 0.8vw, 14px);
-            min-width: 800px;
-        }
-        .data-table thead {
-            background: var(--dark-brown);
-            color: var(--vintage-beige);
-        }
-        .data-table th {
-            padding: 12px 14px;
-            text-align: left;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-        .data-table td {
-            padding: 10px 14px;
-            border-bottom: 1px solid rgba(199, 166, 107, 0.06);
-            color: var(--dark-brown);
-            vertical-align: middle;
-        }
-        .data-table tbody tr:hover {
-            background: rgba(199, 166, 107, 0.06);
-        }
-        .data-table tbody tr:nth-child(even) {
-            background: rgba(242, 230, 200, 0.30);
-        }
-        .data-table .empty-row td {
-            text-align: center;
-            padding: 30px;
-            color: var(--earth-brown);
-            opacity: 0.6;
-            font-style: italic;
-        }
-
-        .login-box {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .login-box input {
-            padding: 10px 16px;
-            border: 1px solid rgba(199, 166, 107, 0.2);
-            border-radius: 40px;
-            background: rgba(255, 255, 255, 0.5);
-            font-size: 14px;
-            width: 220px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-        .login-box input:focus {
-            border-color: var(--old-gold);
-        }
-        .login-box .btn-login {
-            padding: 10px 28px;
-            border: none;
-            border-radius: 40px;
-            background: var(--old-gold);
-            color: var(--dark-brown);
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-left: 8px;
-        }
-        .login-box .btn-login:hover {
-            background: #d4b87a;
-        }
-        .login-box .error-msg {
-            color: #c0392b;
-            font-size: 13px;
-            margin-top: 6px;
-        }
-
-        /* ===== CONTACT BAR — DENGAN WARNA IKON ===== */
+        /* ===== CONTACT ===== */
         .contact-bar {
             background: var(--dark-brown);
             padding: 36px 0 24px;
@@ -1479,7 +1352,6 @@
         .footer-content .logo-row img:hover {
             opacity: 1;
         }
-
         .footer-content .tagline {
             font-family: 'Cinzel', serif;
             font-size: clamp(16px, 2vw, 28px);
@@ -1548,36 +1420,6 @@
             }
             .about-grid .item p {
                 color: rgba(242, 230, 200, 0.50);
-            }
-
-            .data-section {
-                background: #1a0e08;
-            }
-            .data-card {
-                background: #1a0e08;
-                border-color: rgba(199, 166, 107, 0.06);
-            }
-            .data-card .data-header h3 {
-                color: var(--vintage-beige);
-            }
-            .data-table thead {
-                background: #0a0604;
-                color: var(--vintage-beige);
-            }
-            .data-table td {
-                color: var(--vintage-beige);
-                border-bottom-color: rgba(199, 166, 107, 0.04);
-            }
-            .data-table tbody tr:nth-child(even) {
-                background: rgba(242, 230, 200, 0.02);
-            }
-            .data-table tbody tr:hover {
-                background: rgba(199, 166, 107, 0.04);
-            }
-            .login-box input {
-                background: rgba(255, 255, 255, 0.05);
-                color: var(--vintage-beige);
-                border-color: rgba(199, 166, 107, 0.1);
             }
 
             .faq {
@@ -1765,27 +1607,8 @@
             .success-message h2 {
                 font-size: 22px;
             }
-            .success-id strong {
-                font-size: 22px;
-            }
             .footer-content .logo-row img {
                 height: 36px;
-            }
-            .data-card .data-header {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .data-card .data-header .btn-small {
-                width: 100%;
-                text-align: center;
-            }
-            .login-box input {
-                width: 100%;
-                margin-bottom: 8px;
-            }
-            .login-box .btn-login {
-                width: 100%;
-                margin-left: 0;
             }
         }
 
@@ -1835,9 +1658,7 @@
     <!-- ===== PARTICLES ===== -->
     <div class="particles" id="particles"></div>
 
-    <!-- ============================================================
-    HERO
-    ============================================================ -->
+    <!-- ===== HERO ===== -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-mountains">
@@ -1863,9 +1684,7 @@
         <div class="scroll-indicator"><span>Gulir ke Bawah</span><span class="arrow">⌄</span></div>
     </section>
 
-    <!-- ============================================================
-    ABOUT
-    ============================================================ -->
+    <!-- ===== ABOUT ===== -->
     <section class="about" id="tentang">
         <div class="container">
             <div class="about-card reveal">
@@ -1899,9 +1718,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    WHY JOIN
-    ============================================================ -->
+    <!-- ===== WHY JOIN ===== -->
     <section class="why-join" id="alasan">
         <div class="container">
             <h2 class="section-title reveal">Mengapa Bergabung?</h2>
@@ -1932,14 +1749,12 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    TIMELINE
-    ============================================================ -->
+    <!-- ===== TIMELINE ===== -->
     <section class="timeline-section" id="jadwal">
         <div class="container">
             <h2 class="section-title reveal">Jalur <span>Pendaftaran</span></h2>
             <div class="section-divider reveal"></div>
-            <p class="section-subtitle reveal">Ikuti setiap tahapan untuk menjadi bagian dari keluarga besar GRASKAMA</p>
+            <p class="section-subtitle reveal">Ikuti setiap tahapan untuk menjadi bagian dari keluarga besar Ambalan Soekarno Fatmawati</p>
             <div class="timeline" id="timeline">
                 <div class="timeline-item" data-delay="0">
                     <div class="dot"></div>
@@ -1969,9 +1784,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    REGISTRATION
-    ============================================================ -->
+    <!-- ===== REGISTRATION ===== -->
     <section class="registration" id="daftar">
         <div class="container">
             <h2 class="section-title reveal">Pendaftaran <span>GRASKAMA</span></h2>
@@ -1990,15 +1803,12 @@
                             <label>Kelas <span class="req">*</span></label>
                             <select name="kelas" required>
                                 <option value="">Pilih Kelas</option>
-                                    <option>X 1</option>
-                                    <option>X 2</option>
-                                    <option>XI 1</option>
-                                    <option>XI 2</option>
-                                    <option>XII 1</option>
-                                    <option>XII 2</option>
+                                    <option>X 1</option><option>X 2</option>
+                                    <option>XI 1</option><option>XI 2</option>
+                                    <option>XII 1</option><option>XII 2</option>
                             </select>
                         </div>
-                        <div class="form-group"><label>Jurusan <span class="req">*</span></label><select name="jurusan" required><option value="">Pilih Jurusan</option><option>TKJ (Teknik Komputer Jaringan)</option><option>ATU (Agribisnis Ternak Unggas)</option><option>ATR (Agribisnis Ternak Ruminansia)</option></select></div>
+                        <div class="form-group"><label>Jurusan <span class="req">*</span></label><select name="jurusan" required><option value="">Pilih Jurusan</option><option>TKJ</option><option>ATU</option><option>ATR</option></select></div>
                     </div>
                     <div class="form-row">
                         <div class="form-group"><label>Jenis Kelamin <span class="req">*</span></label><select name="gender" required><option value="">Pilih</option><option>Laki-laki</option><option>Perempuan</option></select></div>
@@ -2006,8 +1816,8 @@
                     </div>
                     <div class="form-group"><label>Alamat <span class="req">*</span></label><input type="text" name="alamat" placeholder="Alamat lengkap" required /></div>
                     <div class="form-row">
-                        <div class="form-group"><label>Nomor Whatsapp <span class="req">*</span></label><input type="tel" name="telp" placeholder="0812-3456-7890" required /></div>
-                        <div class="form-group"><label>Instagram/tiktok</label><input type="text" name="ig" placeholder="@username" /></div>
+                        <div class="form-group"><label>Nomor Telepon <span class="req">*</span></label><input type="tel" name="telp" placeholder="0812-3456-7890" required /></div>
+                        <div class="form-group"><label>Instagram/Tiktok</label><input type="text" name="ig" placeholder="@username" /></div>
                     </div>
                     <div class="form-group"><label>Riwayat Kesehatan</label><textarea name="kesehatan" placeholder="Cantumkan riwayat penyakit jika ada"></textarea></div>
                     <div class="form-group"><label>Motivasi Bergabung <span class="req">*</span></label><textarea name="motivasi" placeholder="Tuliskan alasan dan motivasi Anda bergabung dengan GRASKAMA" required></textarea></div>
@@ -2018,14 +1828,16 @@
                     </div>
                     <button type="submit" class="btn-submit" id="submitBtn">DAFTAR SEKARANG</button>
                 </form>
+
+                <!-- SUCCESS — TANPA NOMOR REGISTRASI -->
                 <div id="successMessage" class="success-message" style="display: none;">
                     <div class="success-icon">✅</div>
                     <h2>Pendaftaran Berhasil!</h2>
                     <p>Terima kasih telah mendaftar di GRASKAMA.</p>
-                    <div class="success-id"><span>Nomor Registrasi</span><strong id="regNumber">GRSK-2026-XXXX</strong></div>
-                    <p class="success-note">Simpan nomor registrasi ini. Pengumuman hasil seleksi akan diinformasikan melalui website dan papan informasi sekolah.</p>
-                    <button onclick="resetForm()" class="btn btn-primary" style="margin-top:14px; background: var(--old-gold); color: var(--dark-brown); border: none;">Kembali ke Form</button>
+                    <p class="note">Data Anda telah kami terima. Pengumuman hasil seleksi akan diinformasikan melalui website dan papan informasi sekolah.</p>
+                    <button class="btn-back" onclick="resetForm()">Kembali ke Form</button>
                 </div>
+
                 <div class="countdown-wrap">
                     <div class="label">⏳ Batas Pendaftaran</div>
                     <div class="countdown" id="countdown">
@@ -2039,33 +1851,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    DATA PENDAFTAR — TABEL ADMIN
-    ============================================================ -->
-    <section class="data-section" id="data-pendaftar">
-        <div class="container">
-            <h2 class="section-title reveal">Data <span>Pendaftar</span></h2>
-            <div class="section-divider reveal"></div>
-            <p class="section-subtitle reveal"><br /> <strong style="color:var(--old-gold);"></strong></p>
-            <div class="data-card reveal">
-                <div class="data-header">
-                    <h3>📋 Daftar Pendaftar</h3>
-                    <button class="btn-small" onclick="refreshData()">⟳ Refresh Data</button>
-                </div>
-                <div id="dataContainer">
-                    <div class="login-box">
-                        <input type="password" id="passInput" placeholder="Masukkan password" />
-                        <button class="btn-login" onclick="loginAndLoad()">Lihat Data</button>
-                        <div class="error-msg" id="loginError"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================
-    FAQ
-    ============================================================ -->
+    <!-- ===== FAQ ===== -->
     <section class="faq" id="faq">
         <div class="container">
             <h2 class="section-title reveal">Pertanyaan <span>Umum</span></h2>
@@ -2096,42 +1882,18 @@
         </div>
     </section>
 
-    <!-- ============================================================
-    CONTACT — DENGAN WARNA IKON
-    ============================================================ -->
+    <!-- ===== CONTACT ===== -->
     <section class="contact-bar">
         <div class="container">
             <div class="contact-grid">
-                <!-- WhatsApp -->
-                <a href="https://wa.me/qr/RDUGVNARN3X3J1" target="_blank" class="item">
-                    <svg class="icon-svg" viewBox="0 0 175.216 175.552" style="fill:#25D366;">
-                        <defs><linearGradient id="whatsappGrad" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#57d163"/><stop offset="1" stop-color="#23b33a"/></linearGradient></defs>
-                        <path fill="#fff" d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558z"/>
-                        <path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z"/>
-                        <path fill="url(#whatsappGrad)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z"/>
-                        <path fill="#fff" fill-rule="evenodd" d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"/>
-                    </svg>
+                <a href="https://wa.me/083831901319" target="_blank" class="item">
+                    <svg class="icon-svg" viewBox="0 0 175.216 175.552" style="fill:#25D366;"><defs><linearGradient id="whatsappGrad" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#57d163"/><stop offset="1" stop-color="#23b33a"/></linearGradient></defs><path fill="#fff" d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558z"/><path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z"/><path fill="url(#whatsappGrad)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z"/><path fill="#fff" fill-rule="evenodd" d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"/></svg>
                     Kak Rois
                 </a>
-
-                <!-- Instagram -->
                 <a href="https://www.instagram.com/pramuka_skama" target="_blank" class="item">
-                    <svg class="icon-svg" viewBox="0 0 24 24" style="fill:url(#instagramGrad);">
-                        <defs>
-                            <linearGradient id="instagramGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#f09433"/>
-                                <stop offset="25%" stop-color="#e6683c"/>
-                                <stop offset="50%" stop-color="#dc2743"/>
-                                <stop offset="75%" stop-color="#cc2366"/>
-                                <stop offset="100%" stop-color="#bc1888"/>
-                            </linearGradient>
-                        </defs>
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
+                    <svg class="icon-svg" viewBox="0 0 24 24" style="fill:url(#instagramGrad);"><defs><linearGradient id="instagramGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                     @pramuka_skama
                 </a>
-
-                <!-- TikTok -->
                 <a href="https://www.tiktok.com/@graskama" target="_blank" class="item">
     <svg class="icon-svg" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
         <!-- Layer Magenta / Merah Muda (Background Geser) -->
@@ -2143,24 +1905,17 @@
         <!-- Layer Utama (Hitam atau Putih) -->
         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .56.04.82.11V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.48 6.3 6.3 0 0 0 1.83-4.48V8.86a8.28 8.28 0 0 0 5.2 1.83V7.24a4.85 4.85 0 0 1-1.3-.55z" fill="#000000"/>
     </svg>
-    @graskama    
-</a>
-                    
-
-                <!-- Google Maps -->
+    graskama
+                </a>
                 <a href="https://maps.app.goo.gl/tJ84wQGnssRUCxwN7" target="_blank" class="item">
-                    <svg class="icon-svg" viewBox="0 0 24 24" style="fill:#EA4335;">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
+                    <svg class="icon-svg" viewBox="0 0 24 24" style="fill:#EA4335;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                     SMKN 1 Maesan
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ============================================================
-    FOOTER — PAKAI FILE GAMBAR LOGO
-    ============================================================ -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="rope-top">━━━━━━━━━━━━━━━━━━━━</div>
@@ -2280,7 +2035,7 @@
         // ================================================================
         // REGISTRATION — Kirim ke Google Sheet
         // ================================================================
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2rOXvCjIyJLICDVoXE-F2UvAPw6vYlOUx63qL61jalj3Dbt5eIedJo5zIV4EoT7Jx/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwSOtt2Rl7JDn432VzhOaEqDrtCL7b1P5gcXVnfl9x2BytvSur0trNqciazhdCenec-/exec';
         const form = document.getElementById('registrationForm');
         const submitBtn = document.getElementById('submitBtn');
 
@@ -2309,8 +2064,7 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
-                const num = Math.floor(1000 + Math.random() * 9000);
-                document.getElementById('regNumber').innerText = `GRSK-2026-${num}`;
+                // Tampilkan sukses — TANPA nomor registrasi
                 form.style.display = 'none';
                 document.getElementById('successMessage').style.display = 'block';
                 document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -2328,96 +2082,6 @@
             form.reset();
             document.querySelector('.form-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-
-        // ================================================================
-        // DATA PENDAFTAR — Admin Table
-        // ================================================================
-        const DATA_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz2rOXvCjIyJLICDVoXE-F2UvAPw6vYlOUx63qL61jalj3Dbt5eIedJo5zIV4EoT7Jx/exec?action=getData';
-
-        let isLoggedIn = false;
-        const PASSWORD = 'graskama2026';
-
-        function loginAndLoad() {
-            const pass = document.getElementById('passInput').value.trim();
-            const errorEl = document.getElementById('loginError');
-            if (pass === PASSWORD) {
-                isLoggedIn = true;
-                errorEl.textContent = '';
-                loadDataTable();
-            } else {
-                errorEl.textContent = '❌ Password salah. Silakan coba lagi.';
-            }
-        }
-
-        async function loadDataTable() {
-            const container = document.getElementById('dataContainer');
-            container.innerHTML = '<div style="text-align:center;padding:20px;">⏳ Memuat data...</div>';
-            try {
-                const response = await fetch(DATA_SCRIPT_URL);
-                if (!response.ok) throw new Error('Gagal mengambil data');
-                const result = await response.json();
-                if (result.status === 'success' && Array.isArray(result.data)) {
-                    buildTable(result.data);
-                } else {
-                    container.innerHTML =
-                        '<div style="text-align:center;padding:20px;color:var(--earth-brown);">Belum ada data pendaftar atau terjadi kesalahan.</div>';
-                }
-            } catch (err) {
-                container.innerHTML =
-                    `<div style="text-align:center;padding:20px;color:#c0392b;">❌ Gagal memuat data: ${err.message}</div>`;
-            }
-        }
-
-        function buildTable(data) {
-            if (!data || data.length === 0) {
-                document.getElementById('dataContainer').innerHTML = `
-                            <div class="table-wrapper">
-                                <table class="data-table">
-                                    <thead><tr><th>#</th><th>Nama</th><th>NISN</th><th>Kelas</th><th>Jurusan</th><th>Gender</th><th>Tanggal Lahir</th><th>Alamat</th><th>Telepon</th><th>Instagram</th><th>Kesehatan</th><th>Motivasi</th></tr></thead>
-                                    <tbody><tr class="empty-row"><td colspan="12">Belum ada data pendaftar.</td></tr></tbody>
-                                </table>
-                            </div>
-                        `;
-                return;
-            }
-
-            let html = `<div class="table-wrapper"><table class="data-table"><thead><tr>
-                            <th>#</th><th>Nama</th><th>NISN</th><th>Kelas</th><th>Jurusan</th><th>Gender</th>
-                            <th>Tanggal Lahir</th><th>Alamat</th><th>Telepon</th><th>Instagram</th><th>Kesehatan</th><th>Motivasi</th>
-                        </tr></thead><tbody>`;
-
-            data.forEach((row, i) => {
-                html += `<tr>
-                            <td>${i+1}</td>
-                            <td>${row.nama || ''}</td>
-                            <td>${row.nisn || ''}</td>
-                            <td>${row.kelas || ''}</td>
-                            <td>${row.jurusan || ''}</td>
-                            <td>${row.gender || ''}</td>
-                            <td>${row.tanggal || ''}</td>
-                            <td>${row.alamat || ''}</td>
-                            <td>${row.telp || ''}</td>
-                            <td>${row.ig || ''}</td>
-                            <td>${row.kesehatan || ''}</td>
-                            <td style="max-width:200px;word-break:break-word;">${row.motivasi || ''}</td>
-                        </tr>`;
-            });
-
-            html += `</tbody></table></div>`;
-            document.getElementById('dataContainer').innerHTML = html;
-        }
-
-        function refreshData() {
-            if (isLoggedIn) {
-                loadDataTable();
-            } else {
-                document.getElementById('loginError').textContent = '⚠️ Silakan login terlebih dahulu.';
-            }
-        }
-
-        document.getElementById('passInput').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') loginAndLoad();
-        });
 
         // ===== PARALLAX MOUSE =====
         let isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
